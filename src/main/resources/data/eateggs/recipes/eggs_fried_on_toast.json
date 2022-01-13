@@ -1,0 +1,15 @@
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [        
+        {
+            "item": "eateggs:eggs_toast"
+        },
+        {
+            "item": "eateggs:eggs_fried"
+        }                        
+    ],    
+    "result": {
+      "item": "eateggs:eggs_fried_on_toast",
+      "count": 1
+    }
+  }  

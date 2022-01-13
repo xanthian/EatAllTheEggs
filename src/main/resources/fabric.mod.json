@@ -3,36 +3,29 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Eat All The Eggs",
+  "description": "1.18.1 port of EatTheEggs by EM3R50N",
   "authors": [
-    "Me!"
+    "Xanthian",
+    "EM3R50N"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/xanthian/EatAllTheEggs"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/eateggs/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.xanthian.eateggs.EatAllTheEggs"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.12.10",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

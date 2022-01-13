@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [        
+        {
+            "item": "eateggs:eggs_scrambled"
+        },
+        {
+            "item": "eateggs:eggs_smokey_bacon"
+        }
+    ],    
+    "result": {
+      "item": "eateggs:eggs_and_bacon",
+      "count": 1
+    }
+  }

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " Z ",
+        "XXX",
+        " Z "
+    ],
+    "key": {
+        "X": {
+            "item": "minecraft:egg"
+        },
+        "Z": {
+            "item": "eateggs:eggs_sliced_bread"
+        }
+    },
+    "result": {
+        "item": "eateggs:eggs_scrambled_sandwich"
+    }
+}

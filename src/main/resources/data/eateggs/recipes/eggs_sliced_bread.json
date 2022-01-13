@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:bread"
+        }
+    ],
+    "result": {
+        "item": "eateggs:eggs_sliced_bread",
+        "count": 12
+    }
+}

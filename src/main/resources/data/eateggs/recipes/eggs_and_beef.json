@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "eateggs:eggs_scrambled"
+        },
+        {
+            "item": "minecraft:cooked_beef"
+        }
+    ],
+    "result": {
+        "item": "eateggs:eggs_and_beef",
+        "count": 1
+    }
+}

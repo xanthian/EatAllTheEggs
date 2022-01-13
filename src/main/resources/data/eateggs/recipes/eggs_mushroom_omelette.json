@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [        
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "minecraft:brown_mushroom"
+        }   
+    ],    
+    "result": {
+      "item": "eateggs:eggs_mushroom_omelette",
+      "count": 1
+    }
+  }
