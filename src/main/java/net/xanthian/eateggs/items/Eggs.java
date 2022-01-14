@@ -31,11 +31,11 @@ public class Eggs {
     public static final Item EGGS_SCRAMBLED_SANDWICH = registerItem("eggs_scrambled_sandwich",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.7F).build())));
     public static final Item EGGS_SLICED_BREAD = registerItem("eggs_sliced_bread",
-            new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4F).build())));
+            new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2F).build())));
     public static final Item EGGS_SMOKEY_BACON = registerItem("eggs_smokey_bacon",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8F).meat().build())));
     public static final Item EGGS_TOAST = registerItem("eggs_toast",
-            new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5F).build())));
+            new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build())));
 
 
     //Register Items
