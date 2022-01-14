@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eateggs:eggs_smoky_bacon"
+    ]
+  },
+  "criteria": {
+    "has_cooked_porkchop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items":[
+              "minecraft:cooked_porkchop"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eateggs:eggs_smoky_bacon"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cooked_porkchop",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -3,7 +3,7 @@
     "ingredient": {
         "item": "minecraft:cooked_porkchop"
     },
-    "result": "eateggs:eggs_smokey_bacon",
+    "result": "eateggs:eggs_smoky_bacon",
     "count": 1,
     "cookingtime":100,
     "experience":0.35    

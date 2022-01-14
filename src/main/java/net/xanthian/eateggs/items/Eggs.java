@@ -1,11 +1,13 @@
 package net.xanthian.eateggs.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.*;
 
+import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.item.Item;
 
 import net.xanthian.eateggs.EatAllTheEggs;
 
@@ -16,7 +18,7 @@ public class Eggs {
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.85F).build())));
     public static final Item EGGS_BEEF = registerItem("eggs_and_beef",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.85F).build())));
-    public static final Item EGGS_BOILED_EGG = registerItem("eggs_boiled_egg",
+    public static final Item EGGS_BOILED = registerItem("eggs_boiled",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5F).build())));
     public static final Item EGGS_FRIED = registerItem("eggs_fried",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.7F).build())));
@@ -24,6 +26,8 @@ public class Eggs {
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.7F).build())));
     public static final Item EGGS_MUSHROOM_OMELETTE = registerItem("eggs_mushroom_omelette",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.7F).build())));
+    public static final Item EGGS_ROTTEN = registerItem("eggs_rotten",
+            new Item(new FabricItemSettings().group(Group.EGGS)));
     public static final Item EGGS_SALAD = registerItem("eggs_salad",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8F).build())));
     public static final Item EGGS_SCRAMBLED = registerItem("eggs_scrambled",
@@ -32,7 +36,7 @@ public class Eggs {
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.7F).build())));
     public static final Item EGGS_SLICED_BREAD = registerItem("eggs_sliced_bread",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2F).build())));
-    public static final Item EGGS_SMOKEY_BACON = registerItem("eggs_smokey_bacon",
+    public static final Item EGGS_SMOKY_BACON = registerItem("eggs_smoky_bacon",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8F).meat().build())));
     public static final Item EGGS_TOAST = registerItem("eggs_toast",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build())));

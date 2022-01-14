@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eateggs:eggs_and_beef"
+    ]
+  },
+  "criteria": {
+    "has_egg_scrambled": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items":[
+              "eateggs:eggs_scrambled"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eateggs:eggs_and_beef"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_egg_scrambled",
+      "has_the_recipe"
+    ]
+  ]
+}
