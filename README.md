@@ -1,6 +1,6 @@
 # Eat All The Eggs
 
-## 1.18.1 port of https://www.curseforge.com/minecraft/mc-mods/eat-the-eggs
+## 1.18.1 rewrite of https://www.curseforge.com/minecraft/mc-mods/eat-the-eggs
 v1 textures
 ![image](https://user-images.githubusercontent.com/7688001/149425715-f6dbb564-542d-41b5-ac68-01a6d26553da.png)
 v3 textures
