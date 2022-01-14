@@ -12,7 +12,13 @@
         },
         {
             "item": "minecraft:brown_mushroom"
-        }   
+        },
+        {
+            "item": "minecraft:brown_mushroom"
+        },
+        {
+            "item": "minecraft:brown_mushroom"
+        }
     ],    
     "result": {
       "item": "eateggs:eggs_mushroom_omelette",
