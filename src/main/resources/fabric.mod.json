@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "eateggs",
   "version": "${version}",
 
   "name": "Eat All The Eggs",
-  "description": "1.18.1 port of EatTheEggs by EM3R50N",
+  "description": "1.18.1 update & rewrite of EatTheEggs by EM3R50N",
   "authors": [
-    "Xanthian",
-    "EM3R50N"
+    "Xanthian"
   ],
   "contact": {
     "sources": "https://github.com/xanthian/EatAllTheEggs"
@@ -16,7 +15,6 @@
   "license": "CC0-1.0",
   "icon": "assets/eateggs/icon.png",
 
-  "environment": "*",
   "entrypoints": {
     "main": [
       "net.xanthian.eateggs.EatAllTheEggs"
@@ -24,7 +22,6 @@
   },
   "depends": {
     "fabricloader": ">=0.12.10",
-    "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
   }
