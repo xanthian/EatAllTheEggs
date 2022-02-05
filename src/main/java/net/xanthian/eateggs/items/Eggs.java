@@ -1,11 +1,8 @@
 package net.xanthian.eateggs.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.*;
 
-import net.minecraft.potion.Potions;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -40,7 +37,6 @@ public class Eggs {
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8F).meat().build())));
     public static final Item EGGS_TOAST = registerItem("eggs_toast",
             new Item(new FabricItemSettings().group(Group.EGGS).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build())));
-
 
     //Register Items
     private static Item registerItem(String name, Item item) {
