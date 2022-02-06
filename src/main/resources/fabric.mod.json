@@ -6,7 +6,8 @@
   "name": "Eat All The Eggs",
   "description": "1.18.1 update & rewrite of EatTheEggs by EM3R50N",
   "authors": [
-    "Xanthian"
+    "Xanthian",
+    "Spearkiller (textures)"
   ],
   "contact": {
     "sources": "https://github.com/xanthian/EatAllTheEggs"
