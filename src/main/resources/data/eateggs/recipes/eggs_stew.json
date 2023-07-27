@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "eateggs:eggs_boiled"
+        },
+        {
+            "item": "eateggs:eggs_boiled"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "eateggs:eggs_stew",
+        "count": 1
+    }
+}
