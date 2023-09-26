@@ -1,26 +1,27 @@
 package net.xanthian.eateggs.entity;
 
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import net.xanthian.eateggs.Initialise;
 
 public class ModEntities {
 
-    public static final EntityType<RottenEggEntity> ROTTEN_EGG_ENTITY = registerRottenEgg();
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Initialise.MOD_ID);
 
-    private static EntityType<RottenEggEntity> registerRottenEgg() {
-        return Registry.register(Registries.ENTITY_TYPE, new Identifier(Initialise.MOD_ID, "rotten_egg"),
-                FabricEntityTypeBuilder.<RottenEggEntity>create(SpawnGroup.MISC, RottenEggEntity::new)
-                        .dimensions(EntityDimensions.fixed(0.25F, 0.25F))
-                        .trackRangeChunks(4)
-                        .trackedUpdateRate(10)
-                        .build());
+    public static final RegistryObject<EntityType<RottenEggEntity>> EGGS_ROTTEN =
+            ENTITY_TYPES.register("eggs_rotten",
+            () -> EntityType.Builder.<RottenEggEntity>of(RottenEggEntity::new, MobCategory.MISC)
+                    .sized(0.25f, 0.25f)
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+                    .build("eggs_rotten"));
+
+    public static void register(IEventBus eventBus) {
+            ENTITY_TYPES.register(eventBus);
     }
 }

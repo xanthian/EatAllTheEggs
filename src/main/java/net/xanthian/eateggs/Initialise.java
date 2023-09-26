@@ -1,51 +1,74 @@
 package net.xanthian.eateggs;
 
-import net.fabricmc.api.ModInitializer;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.xanthian.eateggs.entity.ModEntities;
+import net.xanthian.eateggs.items.ModItems;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.xanthian.eateggs.items.Eggs;
+@Mod(Initialise.MOD_ID)
+public class Initialise {
 
-public class Initialise implements ModInitializer {
+    public static final String MOD_ID = "eateggs";
 
-	public static final String MOD_ID = "eateggs";
+    public Initialise() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-	public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "eatalltheeggs"));
+        ModItems.ITEMS.register(modEventBus);
 
-	@Override
-	public void onInitialize() {
+        ModEntities.ENTITY_TYPES.register(modEventBus);
 
-		Eggs.registerModItems();
+        modEventBus.addListener(this::commonSetup);
+        MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::addCreative);
+    }
 
-		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
-				.displayName(Text.literal("Eat All The Eggs"))
-				.icon(() -> new ItemStack(Eggs.EGGS_SCRAMBLED))
-				.entries((context, entries) -> {
-					entries.add(Eggs.EGGS_BOILED);
-					entries.add(Eggs.EGGS_SALAD);
-					entries.add(Eggs.EGGS_STEW);
-					entries.add(Eggs.EGGS_FRIED);
-					entries.add(Eggs.EGGS_FRIED_ON_TOAST);
-					entries.add(Eggs.GOLDEN_EGG);
-					entries.add(Eggs.EGGS_MUSHROOM_OMELETTE);
-					entries.add(Eggs.EGGS_ROTTEN);
-					entries.add(Eggs.EGGS_SCRAMBLED);
-					entries.add(Eggs.EGGS_SCRAMBLED_SANDWICH);
-					entries.add(Eggs.EGGS_BACON);
-					entries.add(Eggs.EGGS_BEEF);
-					entries.add(Eggs.EGGS_SLICED_BREAD);
-					entries.add(Eggs.EGGS_TOAST);
-					entries.add(Eggs.EGGS_SMOKY_BACON);
+    private void commonSetup(final FMLCommonSetupEvent event) {
 
+    }
 
-				})
-				.build());
-	}
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.EGGS_BOILED);
+            event.accept(ModItems.EGGS_FRIED);
+            event.accept(ModItems.EGGS_FRIED_ON_TOAST);
+            event.accept(ModItems.EGGS_MUSHROOM_OMELETTE);
+            event.accept(ModItems.EGGS_SCRAMBLED_SANDWICH);
+            event.accept(ModItems.EGGS_SLICED_BREAD);
+            event.accept(ModItems.EGGS_SMOKY_BACON);
+            event.accept(ModItems.EGGS_TOAST);
+            event.accept(ModItems.GOLDEN_EGG);
+            event.accept(ModItems.EGGS_ROTTEN);
+            event.accept(ModItems.EGGS_BACON);
+            event.accept(ModItems.EGGS_BEEF);
+            event.accept(ModItems.EGGS_SCRAMBLED);
+            event.accept(ModItems.EGGS_SALAD);
+            event.accept(ModItems.EGGS_STEW);
+
+    }
+
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+
+    }
+
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
+
+        }
+    }
 }
