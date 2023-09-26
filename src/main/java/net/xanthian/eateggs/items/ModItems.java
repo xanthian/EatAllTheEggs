@@ -1,10 +1,9 @@
 package net.xanthian.eateggs.items;
 
 import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.EggItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -19,10 +18,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Initialise.MOD_ID);
 
     public static final RegistryObject<Item> EGGS_BACON = ITEMS.register("eggs_and_bacon",
-            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_BACON).stacksTo(1)));
+            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_BACON).stacksTo(1).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> EGGS_BEEF = ITEMS.register("eggs_and_beef",
-            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_BEEF).stacksTo(1)));
+            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_BEEF).stacksTo(1).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> EGGS_BOILED = ITEMS.register("eggs_boiled",
             () -> new Item(new Item.Properties().food(ModFoods.EGGS_BOILED)));
@@ -40,10 +39,10 @@ public class ModItems {
             () -> new RottenEggItem((new Item.Properties()).stacksTo(16)));
 
     public static final RegistryObject<Item> EGGS_SALAD = ITEMS.register("eggs_salad",
-            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_SALAD).stacksTo(1)));
+            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_SALAD).stacksTo(1).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> EGGS_SCRAMBLED = ITEMS.register("eggs_scrambled",
-            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_SCRAMBLED).stacksTo(1)));
+            () -> new BowlFoodItem(new Item.Properties().food(ModFoods.EGGS_SCRAMBLED).stacksTo(1).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> EGGS_SCRAMBLED_SANDWICH = ITEMS.register("eggs_scrambled_sandwich",
             () -> new Item(new Item.Properties().food(ModFoods.EGGS_SCRAMBLED_SANDWICH)));
@@ -55,26 +54,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.EGGS_SMOKY_BACON)));
 
     public static final RegistryObject<Item> EGGS_STEW = ITEMS.register("eggs_stew",
-            () -> new Item(new Item.Properties().food(ModFoods.EGGS_STEW)));
+            () -> new Item(new Item.Properties().food(ModFoods.EGGS_STEW).stacksTo(1).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> EGGS_TOAST = ITEMS.register("eggs_toast",
             () -> new Item(new Item.Properties().food(ModFoods.EGGS_TOAST)));
 
     public static final RegistryObject<Item> GOLDEN_EGG = ITEMS.register("golden_egg",
             () -> new Item(new Item.Properties().food(ModFoods.GOLDEN_EGG).stacksTo(16)));
-
-
-
-
-
-
-
-
-
-
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
 
 }

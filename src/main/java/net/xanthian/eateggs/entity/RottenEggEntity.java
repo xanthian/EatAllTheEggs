@@ -21,7 +21,9 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.NetworkHooks;
+
 import net.xanthian.eateggs.items.ModItems;
+
 import org.jetbrains.annotations.NotNull;
 
 public class RottenEggEntity extends ThrowableItemProjectile {
