@@ -1,7 +1,6 @@
 package net.xanthian.eateggs.entity;
 
 import com.google.common.base.MoreObjects;
-
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.Packet;
@@ -17,13 +16,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.network.NetworkHooks;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.network.NetworkHooks;
 import net.xanthian.eateggs.items.ModItems;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RottenEggEntity extends ThrowableItemProjectile {
@@ -46,7 +42,7 @@ public class RottenEggEntity extends ThrowableItemProjectile {
         super.onHitEntity(pResult);
         Entity entity = pResult.getEntity();
         Entity entity2 = this.getOwner();
-        LivingEntity livingEntity = entity2 instanceof LivingEntity ? (LivingEntity)entity2 : null;
+        LivingEntity livingEntity = entity2 instanceof LivingEntity ? (LivingEntity) entity2 : null;
         boolean bl = entity.hurt(this.damageSources().mobProjectile(this, livingEntity), 1.0f);
         if (bl) {
             this.doEnchantDamageEffects(livingEntity, entity);
@@ -71,7 +67,7 @@ public class RottenEggEntity extends ThrowableItemProjectile {
         if (status == 3) {
             double d = 0.08;
             for (int i = 0; i < 8; ++i) {
-                this.level().addParticle(new ItemParticleOption(ParticleTypes.ITEM, this.getItem()), this.getX(), this.getY(), this.getZ(), ((double)this.random.nextFloat() - 0.5) * 0.08, ((double)this.random.nextFloat() - 0.5) * 0.08, ((double)this.random.nextFloat() - 0.5) * 0.08);
+                this.level().addParticle(new ItemParticleOption(ParticleTypes.ITEM, this.getItem()), this.getX(), this.getY(), this.getZ(), ((double) this.random.nextFloat() - 0.5) * 0.08, ((double) this.random.nextFloat() - 0.5) * 0.08, ((double) this.random.nextFloat() - 0.5) * 0.08);
             }
         }
     }
